@@ -1,0 +1,42 @@
+name: Submit Map
+description: Submit a new map to the WZ map database
+title: "[MAP]: "
+labels: ["map", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        To start the process of submitting a new Warzone 2100 map to the map database, please fill out the form below:
+  - type: textarea
+    id: map-upload
+    attributes:
+      label: Upload Map
+      description: Drag map to upload as attachment
+      placeholder: Drag the map .wz here to upload as an attachment to this issue
+    validations:
+      required: true
+  - type: dropdown
+    id: map-creator
+    attributes:
+      label: Map Authorship
+      options:
+        - I am the author of this map
+        - This map was made by someone else
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Map Description
+      description: Optional additional details, provided in English, as a README for the map. (optional)
+      render: text
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
