@@ -11,7 +11,7 @@ body:
     id: map-upload
     attributes:
       label: Upload Map
-      description: "Rename the map .wz to end in .zip, and drag to the field below (must be a single map!) ([help](/docs/submit_map.md))"
+      description: "Rename the map .wz to end in .zip, and drag to the field below (must be a single map!) ([help](https://github.com/Warzone2100/map-submission/docs/submit_map.md))"
       placeholder: Drag a map .zip here to upload as an attachment to this issue.
     validations:
       required: true
