@@ -39,8 +39,8 @@ body:
     id: reviewer-notes
     attributes:
       label: Notes for Reviewers (optional)
-      description: "Any additional comments or notes for reviewers"
-      placeholder: |
+      description: |
+        Any additional comments or notes for reviewers
         Note: These will *not* be added to the map database - they will only be visible in this submission posting.
     validations:
       required: false
