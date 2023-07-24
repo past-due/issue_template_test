@@ -11,17 +11,18 @@ body:
     id: map-upload
     attributes:
       label: Upload Map
-      description: Drag map to upload as attachment
-      placeholder: Drag the map .wz here to upload as an attachment to this issue
+      description: Rename the map .wz to end in .zip, and drag to the field below (must be a single map!)
+      placeholder: Drag a map .zip here to upload as an attachment to this issue.
     validations:
       required: true
   - type: dropdown
     id: map-creator
     attributes:
       label: Map Authorship
+      description: If you're the author of this map, change the option below:
       options:
-        - I am the author of this map
         - This map was made by someone else
+        - I am the author of this map
     validations:
       required: true
   - type: textarea
@@ -32,11 +33,3 @@ body:
       render: text
     validations:
       required: false
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
