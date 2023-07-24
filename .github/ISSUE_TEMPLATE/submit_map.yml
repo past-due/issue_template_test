@@ -19,7 +19,7 @@ body:
     id: map-creator
     attributes:
       label: Authorship
-      description: 'If you're the author of this map, change the option below:'
+      description: "If you're the author of this map, change the option below:"
       options:
         - 'Other: This map was made by someone else'
         - 'Mine: I am the author of this map'
