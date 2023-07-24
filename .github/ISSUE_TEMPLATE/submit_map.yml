@@ -35,3 +35,13 @@ body:
       render: text
     validations:
       required: false
+  - type: textarea
+    id: reviewer-notes
+    attributes:
+      label: Additional Comments
+      description: "Any additional notes for reviewers"
+      placeholder: |
+        Add any additional notes for the people reviewing your submission.
+        (These will not be added to the map database - only in this submission posting.)
+    validations:
+      required: false
