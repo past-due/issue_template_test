@@ -1,5 +1,5 @@
-name: Submit Map
-description: Submit a new map to the WZ map database
+name: 📥 Submit Map
+description: Submit a new map to the Warzone 2100 map database
 title: "[MAP]: "
 labels: ["map", "triage"]
 body:
