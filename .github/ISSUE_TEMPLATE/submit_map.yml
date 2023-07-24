@@ -6,13 +6,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        To start the process of submitting a new Warzone 2100 map to the map database, please fill out the form below:
+        To start the process of submitting a new Warzone 2100 map to the map database, please fill out the form below.
+        ### IMPORTANT: Your map must already be converted to the latest map format. See: ([How to convert old map formats](https://github.com/Warzone2100/map-submission/docs/submit_map.md))
+        > If you are using "FlaME", or another old map editor, you *must* convert your map before using this form to submit it.
   - type: textarea
     id: map-upload
     attributes:
       label: Upload Map
       description: |
-        ## IMPORTANT: Your map must already be converted to the latest map format: ([How to convert old map formats](https://github.com/Warzone2100/map-submission/docs/submit_map.md))
         Rename the map .wz to end in .zip, and drag to the field below (must be a single map!) ([help](https://github.com/Warzone2100/map-submission/docs/submit_map.md))
       placeholder: |
         1.) Click to select this text area.
