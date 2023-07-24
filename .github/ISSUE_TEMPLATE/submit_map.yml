@@ -19,10 +19,10 @@ body:
     id: map-creator
     attributes:
       label: Authorship
-      description: "If you're the author of this map, change the option below:"
+      description: "If you're the author of this map, change this option:"
       options:
-        - 'Other: This map was made by someone else'
-        - 'Mine: I am the author of this map'
+        - "Other: This map was made by someone else"
+        - "Mine: I am the author of this map"
     validations:
       required: true
   - type: textarea
