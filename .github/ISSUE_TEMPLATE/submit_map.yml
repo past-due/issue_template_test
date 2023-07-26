@@ -7,10 +7,6 @@ body:
     attributes:
       value: |
         To start the process of submitting a new Warzone 2100 map to the map database, please fill out the form below.
-        > **NOTE**:
-        > If you are using "FlaME", or another map editor that only exports in old formats, you *must* convert your map using [`maptools-cli`](https://github.com/Warzone2100/maptools-cli) before using this form to submit it.
-        See: [How to convert old map formats](https://github.com/Warzone2100/map-submission/docs/convert_old_maps.md)
-        ### IMPORTANT: Your map must already be converted to the latest map format.
   - type: textarea
     id: map-upload
     attributes:
