@@ -1,0 +1,23 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: ${{ !github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test permissions check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMMENT_AUTHOR_USERNAME: '${{ github.event.comment.user.login }}'
+        run: |
+          gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "/repos/past-due/issue_template_test/collaborators/${COMMENT_AUTHOR_USERNAME}/permission"
+          echo "done"
