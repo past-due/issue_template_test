@@ -21,11 +21,6 @@ jobs:
       contents: read
     
     steps:
-      - name: Checkout current repo (for no reason)
-        uses: actions/checkout@v3
-        with:
-          path: 'ignore'
-    
       - name: Get map database / scripts repo
         env:
           MAP_DB_REPO_URL: 'https://github.com/Warzone2100/maps-database.git'
@@ -60,6 +55,8 @@ jobs:
         env:
           MAP_DB_REPO_PATH: '${{ github.workspace }}/map-db'
           GH_TOKEN: ${{ github.token }}
+          WZ_GH_APP_MAPREPO_MANAGER_APP_ID: ${{ secrets.WZ_GH_APP_MAPREPO_MANAGER_APP_ID }}
+          WZ_GH_APP_MAPREPO_MANAGER_PRIVATE_KEY_SECRET: ${{ secrets.WZ_GH_APP_MAPREPO_MANAGER_PRIVATE_KEY_SECRET }}
         run: |
           set +e
           mkdir -p "temp"
