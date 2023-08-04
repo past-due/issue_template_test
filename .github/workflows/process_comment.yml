@@ -18,8 +18,14 @@ jobs:
     
     permissions:
       issues: write
+      contents: read
     
     steps:
+      - name: Checkout current repo (for no reason)
+        uses: actions/checkout@v3
+        with:
+          path: 'ignore'
+    
       - name: Get map database / scripts repo
         env:
           MAP_DB_REPO_URL: 'https://github.com/Warzone2100/maps-database.git'
