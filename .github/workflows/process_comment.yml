@@ -38,8 +38,7 @@ jobs:
           JSON_COMMENT: ${{ toJSON(github.event.comment) }}
         run: printf '%s\n' "$JSON_COMMENT" > comment.json
       
-      - id: Configure Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
       
