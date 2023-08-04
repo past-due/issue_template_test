@@ -57,6 +57,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           WZ_GH_APP_MAPREPO_MANAGER_APP_ID: ${{ secrets.WZ_GH_APP_MAPREPO_MANAGER_APP_ID }}
           WZ_GH_APP_MAPREPO_MANAGER_PRIVATE_KEY_SECRET: ${{ secrets.WZ_GH_APP_MAPREPO_MANAGER_PRIVATE_KEY_SECRET }}
+          # Use the bot as committer for any new map repo commits
+          # See: https://github.com/orgs/community/discussions/24664
+          GIT_COMMITTER_NAME: 'wz2100-map-repo-manager[bot]'
+          GIT_COMMITTER_EMAIL: '107586528+wz2100-map-repo-manager[bot]@users.noreply.github.com'
         run: |
           set +e
           mkdir -p "temp"
