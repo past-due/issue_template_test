@@ -65,7 +65,7 @@ jobs:
           set +e
           mkdir -p "temp"
           mkdir -p "upload"
-          "${MAP_DB_REPO_PATH}/scripts/handle_map_submission_comment.py" --map-repos-config "${MAP_DB_REPO_PATH}/config/map-repos-config.json" --output-temp-folder ./temp --gh-repo "${GITHUB_REPOSITORY}" --gh-run-id "${GITHUB_RUN_ID}" --gh-issue issue.json --gh-comment comment.json --gen-map-preview "./upload/map-preview.png" --ignore-missing-comment
+          "${MAP_DB_REPO_PATH}/scripts/handle_map_submission_comment.py" --map-repos-config "${MAP_DB_REPO_PATH}/config/map-repos-config.json" --output-temp-folder ./temp --gh-repo "${GITHUB_REPOSITORY}" --gh-run-id "${GITHUB_RUN_ID}" --gh-issue issue.json --gh-comment comment.json --gen-assets-folder "./upload" --ignore-missing-comment
           exitcode="$?"
       
       - name: Upload map preview artifact (if present)
@@ -73,4 +73,11 @@ jobs:
         with:
           name: map-preview
           path: ./upload/map-preview.png
+          if-no-files-found: ignore
+
+      - name: Upload converted map artifact (if present)
+        uses: actions/upload-artifact@v3
+        with:
+          name: map-converted
+          path: ./upload/*-converted.wz
           if-no-files-found: ignore
