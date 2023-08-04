@@ -12,7 +12,7 @@ jobs:
     # - Only run when a new map submission issue *or* when comment body starts with a known command
     #   - /approve
     #   - /replace
-    if: ${{ !github.event.issue.pull_request && ((github.event_name == 'issues) || (github.event_name == 'issue_comment' && (startsWith(github.event.comment.body, '/approve ') || startsWith(github.event.comment.body, '/replace ')) )) }} 
+    if: !github.event.issue.pull_request && ((github.event_name == 'issues) || (github.event_name == 'issue_comment' && (startsWith(github.event.comment.body, '/approve ') || startsWith(github.event.comment.body, '/replace ')) ))
     
     runs-on: ubuntu-latest
     
